@@ -65,7 +65,6 @@ public class OrdersController : ControllerBase
 
         if (!canViewAllOrders && order.UserId != userId.Value)
         {
-            // Не розкриваємо звичайному користувачу існування чужого замовлення.
             return NotFound();
         }
 
